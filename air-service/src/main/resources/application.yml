@@ -1,0 +1,28 @@
+server:
+  tomcat:
+    basedir: /tmp/${app.id}
+    max-connections: 1000
+    max-threads: 300
+    accept-count: 100
+    accesslog:
+      directory: /tmp/${app.id}
+      enabled: true
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 1000MB
+  resources:
+    add-mappings: true
+swagger:
+  base-package: cn.ben.air.controller
+damon:
+  cache:
+    custom-cache:
+      dict_item_cache:
+        time-to-live: 900s
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    cn.ben.air.db.mapper: info
