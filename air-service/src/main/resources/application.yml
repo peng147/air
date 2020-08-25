@@ -7,6 +7,7 @@ server:
     accesslog:
       directory: /tmp/${app.id}
       enabled: true
+  port: 8080
 spring:
   servlet:
     multipart:
@@ -14,13 +15,9 @@ spring:
       max-request-size: 1000MB
   resources:
     add-mappings: true
+  profiles: localhost
 swagger:
   base-package: cn.ben.air.controller
-damon:
-  cache:
-    custom-cache:
-      dict_item_cache:
-        time-to-live: 900s
 
 logging:
   config: classpath:logback-spring.xml

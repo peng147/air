@@ -3,6 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <model.version>0.0.1-SNAPSHOT</model.version>
+        <spring-clould.version>Greenwich.SR1</spring-clould.version>
+        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
+        <maven.version>11</maven.version>
+        <mybatis.version>2.0.1</mybatis.version>
+    </properties>
+
 
     <groupId>cn.ben</groupId>
     <artifactId>air</artifactId>
@@ -13,20 +21,16 @@
         <module>air-service</module>
     </modules>
 
-    <properties>
-        <model.version>0.0.1-SNAPSHOT</model.version>
-        <spring-clould.version>Greenwich.SR1</spring-clould.version>
-        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
-        <maven.version>11</maven.version>
-        <mybatis.version>2.0.1</mybatis.version>
-    </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
 
     <dependencies>
-       <!-- <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <version>${spring-clould.version}</version>
-        </dependency>-->
+
 
     </dependencies>
 

@@ -60,7 +60,7 @@
 
     <!-- 本地环境,开发环境下的日志配置 -->
     <springProfile name="dev, localhost">
-        <root level="INFO">
+        <root level="DEBUG">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="LOG_FILE" />
             <appender-ref ref="JSON_FILE" />
